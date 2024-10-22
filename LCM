@@ -4,4 +4,14 @@ void main()
     int a,b;
     printf("Enter any two nums");
     scanf("%d %d",&a,&b);
+    int big=a>b?a:b;
+    int step=big;
+    while(1)
+    {
+    if(big%a==0&&big%b==0)
+        break;
+    else
+     big=big+step;
+    }
+    printf("LCM is %d",big);
 }
