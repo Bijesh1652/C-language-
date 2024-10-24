@@ -1,0 +1,16 @@
+#include <stdio.h>
+void main() {
+    int i,j,Prime;
+    for (i = 2; i <= 1000; i++) {
+        Prime = 1; 
+        for (j = 2; j < i; j++) { 
+            if (i % j == 0) { 
+                Prime = 0; 
+                break; 
+            }
+        }
+        if (Prime) {
+            printf("%d\n", i); 
+        }
+    }
+}
