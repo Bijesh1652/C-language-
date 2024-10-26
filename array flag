@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <limits.h>
+void main() {
+    int t;
+    printf("Enter the value to search: ");
+    scanf("%d", &t);
+    int n;
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &n);
+    int a[n];
+    printf("Enter the elements of the array:\n");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+    int flag = 1; 
+    for (int i = 0; i < n; i++) {
+        if (t == a[i]) {
+            printf("Found value at index %d\n", i);
+            flag = 0;
+            break;
+        }
+    }
+    if (flag) {
+        printf("Not found\n");
+    }
+}
