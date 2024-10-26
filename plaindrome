@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+bool isPalindrome(char str[], int left, int right) {
+    if (left >= right)
+        return true;
+    if (str[left] != str[right])
+        return false;
+    return isPalindrome(str, left + 1, right - 1);
+}
+void main() {
+    int size;
+    printf("Enter the size of the string: ");
+    scanf("%d", &size);
+    char str[size + 1];
+    printf("Enter the string: ");
+    scanf("%s", str);
+    if (isPalindrome(str, 0, strlen(str) - 1))
+        printf("Palindrome\n");
+    else
+        printf("Not a Palindrome\n");
+}
